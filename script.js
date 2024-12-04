@@ -45,7 +45,7 @@ function generateNumber() {
 
     // Disable the generate button permanently
     generateButton.onclick = null;
-  }, 4000);
+  }, 1000);
 }
 
 // Function to submit the participant's number
