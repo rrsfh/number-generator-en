@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Number Generator</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon2.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -16,6 +17,11 @@
       <button class="tab-button" onclick="showAlert('Instructions')">Instructions</button>
       <button class="tab-button" onclick="showAlert('Contact')">Contact</button>
     </div>
+  </div>
+
+  <!-- Error Message if participantID is missing -->
+  <div id="error-message" style="display: none; color: #D32F2F; font-size: 24px; font-weight: bold;">
+    Error: We could not retrieve your Prolific ID. Please reach out to us on Prolific for assistance.
   </div>
 
   <!-- Create Title and Text Container for Instructions -->

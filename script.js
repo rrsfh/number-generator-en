@@ -11,13 +11,31 @@ var completionToken = getURLParameter('completion_token');
 var generatedNumber;
 var inputNumber;
 
+// Function to check if participantID is present
+function checkParticipantID() {
+  if (!participantID) {
+    document.getElementById("error-message").style.display = "block";  // Show error message
+    document.getElementById("generateButton").disabled = true;  // Disable the generate button
+    return false;  // Stop further execution
+  } else {
+    document.getElementById("error-message").style.display = "none";  // Hide error message
+    return true;  // Continue execution
+  }
+}
+
 // Automatically populate the participantID field when the page loads
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("participantID").value = participantID;
+  if (checkParticipantID()) {
+    document.getElementById("participantID").value = participantID;
+  }
 });
 
 // Set-up the Number Generator Function
 function generateNumber() {
+  if (!checkParticipantID()) {
+    return; // Prevent generating a number if participant ID is missing
+  }
+
   var numberDisplay = document.getElementById("number-display");
   var generateButton = document.getElementById("generateButton");
 
