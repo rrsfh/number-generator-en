@@ -91,7 +91,7 @@ function submitNumber() {
   successMessage.style.display = "block";
 
   // Submit form to Google Sheets
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwXBoJy3FABuGH86uif8kCCNaJBiSiIoAFgW1zb1Nw2e3cmSR8dXvmV9xMF7-fATQP1/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxz92EsFJ-jH5QCYzQblK_77tOydxzAGkG11UCSHdjTYYBKQHs9jbpVYC4nOGf6qBR7mQ/exec'
   const form = document.forms['submit-to-google-sheet']
 
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
